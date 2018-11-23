@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar>
+            <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+            <ion-title>Resultados</ion-title>
+          </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <button (click)="calcularRes()" ion-button block>Calcular Resultados</button>
+
+    <h3>Funcionalidad</h3>
+    <pre [hidden]="finalfun === null" text-wrap>El resultado de adecuacion es:                           {{finalfun}} de 50 puntos.</pre>
+    <pre [hidden]="finalexac === null" text-wrap>El resultado de exactitud es:                            {{finalexac}} de 31 puntos.</pre>
+    <pre [hidden]="finalint === null" text-wrap>El resultado de interoperabilidad es:                    {{finalint}} de 16 puntos.</pre>
+    <pre [hidden]="finalseg === null" text-wrap>El resultado de seguridad es:                            {{finalseg}} de 5 puntos.</pre>
+    <pre [hidden]="finalcfun === null" text-wrap>La conformidad de la funcionalidad es:                            {{finalcfunc}}</pre>
+  
+    <h3>Confiabilidad</h3>
+    <pre [hidden]="finalmad === null" text-wrap>El resultado de madurez es:                            {{finalmad}} de 14 puntos.</pre>
+    <pre [hidden]="finaltolfa === null" text-wrap>El resultado de tolerancia a fallas es:                            {{finaltolfa}} de 4 puntos.</pre>
+    <pre [hidden]="finalrecu === null" text-wrap>El resultado de recuperacion es:                            {{finalrecu}} de 23 puntos.</pre>
+    <pre [hidden]="finalcfun === null" text-wrap>La conformidad de la confiabilidad es:                            {{finalcfia}}</pre>
+  
+    <h3>Usabilidad</h3>
+    <pre [hidden]="finaluente === null" text-wrap>El resultado de entendimiento es:                            {{finaluente}} de 20 puntos.</pre>
+    <pre [hidden]="finaluapre === null" text-wrap>El resultado de aprendizaje es:                            {{finaluapre}} de 1 punto.</pre>
+    <pre [hidden]="finaluopera === null" text-wrap>El resultado de operabilidad es:                            {{finalopera}} de 21 puntos.</pre>
+    <pre [hidden]="finaluatra === null" text-wrap>El resultado de atracción es:                            {{finaloatra}} de 20 puntos.</pre>
+    <pre [hidden]="finalusa === null" text-wrap>La conformidad de la usabilidad es:                            {{finalusa}}</pre>
+  
+    <h3>Eficiencia</h3>
+    <pre [hidden]="finalcompti === null" text-wrap>El resultado de comportamiento de tiempos es:                            {{finalcompti}} de 12 puntos.</pre>
+    <pre [hidden]="finalurecu === null" text-wrap>El resultado de utilización de recursos es:                            {{finalurecu}} de 2 puntos.</pre>
+    <pre [hidden]="finalefic === null" text-wrap>La conformidad de la eficiencia es:                            {{finalefic}}</pre>
+      
+    <h3>Capacidad de mantenimiento</h3>
+    <pre [hidden]="finalcapan === null" text-wrap>El resultado de la capacidad de ser analizado es:                            {{finalcapan}} de 1 punto.</pre>
+    <pre [hidden]="finalcamb === null" text-wrap>El resultado de cambiabilidad es:                            {{finalcamb}} de 2 puntos.</pre>
+    <pre [hidden]="finalcapm === null" text-wrap>La conformidad de la capacidad de mantenimiento es:                            {{finalcapm}}</pre>
+  
+    <h3>Portabilidad</h3>
+    <pre [hidden]="finalfaci === null" text-wrap>El resultado de facilidad de instalción es:                            {{finalfaci}} de 1 punto.</pre>
+    <pre [hidden]="finalpor === null" text-wrap>La conformidad de la portabilidad es:                            {{finalpor}}</pre>    
+      
+    <h3>Calidad de uso</h3>
+    <pre [hidden]="finalprod === null" text-wrap>El resultado de productividad es:                            {{finalprod}} de 1 punto.</pre>
+    <pre [hidden]="finalsegu === null" text-wrap>El resultado de seguridad es:                            {{finalsegu}} de 2 puntos.</pre>
+    <pre [hidden]="finalsati === null" text-wrap>La conformidad de la satisfacción es:                            {{finalsati}} de 10 puntos.</pre>
+</ion-content>

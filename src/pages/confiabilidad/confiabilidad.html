@@ -1,0 +1,133 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Confiabilidad</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<p>La confiabilidad es la capacidad del software para asegurar un nivel de funcionamiento adecuado cuando es utilizando en condiciones específicas. En este caso al confiabilidad se amplia sostener un nivel especificado de funcionamiento y no una función requerida.</p>
+
+  <h2>Madurez</h2>
+	<p>La capacidad que tiene el software para evitar fallas cuando encuentra errores. Ejemplo, la forma como el software advierte al usuario cuando realiza operaciones en la unidad de diskett vacia, o cuando no encuentra espacio suficiente el disco duro donde esta almacenando los datos.</p>
+
+  <ion-list header>
+
+		<ion-item text-wrap>
+			<ion-label>¿Fueron detectados defectos durante el periodo de ejecucion del sistema?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=cmadu1 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema notifica o advierte cuando el usuario realiza cambios cobre una unidad de almacenamiento vacia?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=cmadu2 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema notifica o advierte cuando el sistema no encuentra disponibildad de almacenamiento suficiente en la unidad previamente seleccionada por el usuario?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=cmadu3 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema cuenta con la capacidad de corregir defeectos?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=cmadu4 color="secondary"></ion-toggle>
+		</ion-item>
+
+    <ion-list-header text-wrap>En una escala de 1 a 10. ¿Cuál es la densidad de errores respecto al tamaño del producto?{{cmadu5}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=cmadu5 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+	</ion-list>
+
+  <h2>Tolerancia a errores</h2>
+	<p>La capacidad que tiene el software para mantener un nivel de funcionamiento en caso de errores.</p>
+
+  <ion-list header>
+
+		<ion-item text-wrap>
+			<ion-label>¿Puede mantener el sistema el nivel de rendimiento despues de un fallo por cierto tiempo?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=ctole1 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema sigue funcionando después de un fallo pero con aspectos de funcionalidad deteriorados?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=ctole2 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿Despues de un error se establece una parada segura que no produce efectos en la tolerancia respecto a otros componentes del sistema?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=ctole3 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema cuenta con mecanismos de confirmación para evitar que
+acciones irreversibles sean llevadas acabo?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=ctole4 color="secondary"></ion-toggle>
+		</ion-item>
+
+	</ion-list>
+
+  <h2>Recuperabilidad</h2>
+	<p>La capacidad que tiene el software para restablecer su funcionamiento adecuado y recuperar los datos afectados en el caso de una falla.</p>
+
+  <ion-list header>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema cuenta con una funcion de autoguardado?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=crecu1 color="secondary"></ion-toggle>
+		</ion-item>
+
+    <ion-list-header text-wrap>En una escala de 1 a 10. ¿Cuan es la capacidad de reaccion ante un cierre inesperado?{{crecu2}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=crecu2 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+		<ion-list-header text-wrap>En una escala de 1 a 10. ¿Cuál es la tasa de recuperacion ante un bug?{{crecu3}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=crecu3 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema cuenta con mensajes claros y prácticos que le indican como el
+usuario debe recuperarse de un error?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=crecu4 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿ El sistema tiene opciones que permiten regresar a un estado
+anterior al sistema y enmendar errores?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=crecu5 color="secondary"></ion-toggle>
+		</ion-item>
+
+	</ion-list>
+
+  <h2>Conformidad de la confiabilidad</h2>
+	<p>La capacidad del software de cumplir a los estándares o normas relacionadas a la confiabilidad.
+	</p>
+
+  	<ion-list header>
+
+		<ion-list-header text-wrap>En una escala de 0 a 5. ¿Qué tan satisfecho se encuentra de acuerdo a la confiabilidad del sistema?{{concon}}
+			<ion-item>
+				<ion-range min="0" max="5" step="1" pin="true" [(ngModel)]=concon color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+	</ion-list>
+	<button ion-button color="secondary" block (click)="Siguiente()">Guardar</button>
+</ion-content>

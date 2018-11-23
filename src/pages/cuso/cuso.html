@@ -1,0 +1,67 @@
+<ion-header>
+        <ion-navbar>
+                <button ion-button menuToggle>
+                  <ion-icon name="menu"></ion-icon>
+                </button>
+                <ion-title>Calidad de Uso</ion-title>
+              </ion-navbar>
+    </ion-header>
+    
+    <ion-content padding>
+    <p>
+        Calidad en uso es la calidad del software que el usuario final refleja, la forma como el usuario final logra realizar los procesos con satisfacción, eficiencia y exactitud. 
+        La calidad en uso debe asegurar la prueba o revisión de todas las opciones que el usuario trabaja diariamente y los procesos que realiza esporádicamente relacionados con el mismo software.
+    </p>
+    
+    <h2>Productividad</h2>
+    <p>
+        La forma como el software permite a los usuarios emplear cantidades apropiadas de recursos, en relación a la eficacia lograda en un contexto específico de uso. 
+        Para una empresa es muy importante que el software no afecte a la productividad del empleado.
+    </p>
+    <ion-list header>
+    
+        <ion-item text-wrap>
+            <ion-label>¿El sistema permite al usuario probar todas las funciones de este?</ion-label>
+            <ion-toggle checked="false" [(ngModel)]=cupro1 color="secondary"></ion-toggle>
+        </ion-item>
+    
+    </ion-list>
+    
+    <h2>Seguridad</h2>
+    <p>
+            Se refiere al que el Software no tenga niveles de riesgo para causar daño a las personas, instituciones, software, propiedad intelectual o entorno. 
+            Los riesgos son normalmente el resultado de deficiencias en la funcionalidad (Incluyendo seguridad), fiabilidad, usabilidad o facilidad de mantenimiento.
+    </p>
+    
+      <ion-list header>
+    
+        <ion-item text-wrap>
+            <ion-label>¿El sistema maneja un registro de datos personales del cliente?</ion-label>
+            <ion-toggle checked="false" [(ngModel)]=cuseg1 color="secondary"></ion-toggle>
+        </ion-item>
+    
+        <ion-item text-wrap>
+            <ion-label>¿El sistema solicita la aprobacion para el tratamiento de datos?</ion-label>
+            <ion-toggle checked="false" [(ngModel)]=cuseg2 color="secondary"></ion-toggle>
+        </ion-item>
+    </ion-list>
+    cuseg
+    <h2>Satisfacción</h2>
+    <p>
+        La satisfacción es la respuesta del usuario a la interacción con el software, e incluye las actitudes hacia el uso del mismo. 
+    </p>
+    
+      <ion-list header>
+    
+        <ion-list-header text-wrap> En una escala de 1 a 10. ¿Qué tan satisfecho se encuentra de acuerdo satisfacción del sistema?{{cusat}}
+            <ion-item>
+                <ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=cusat color="danger">
+                    <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+                    <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+                </ion-range>
+            </ion-item>
+        </ion-list-header>
+    
+    </ion-list>
+    <button ion-button color="secondary" block (click)="Siguiente()">Guardar</button>
+    </ion-content>

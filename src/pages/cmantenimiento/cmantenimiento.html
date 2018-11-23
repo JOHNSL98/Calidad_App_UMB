@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-navbar>
+            <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+            <ion-title>Capacidad de Mantenimiento</ion-title>
+          </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<p>
+    La capacidad de mantenimiento es la cualidad que tiene el software para ser modificado. 
+    Incluyendo correcciones o mejoras del software, a cambios en el entorno, y especificaciones de requerimientos funcionales.
+</p>
+
+<h2>Capacidad de ser analizado</h2>
+<p>
+    La forma como el software permite diagnósticos de deficiencias o causas de fallas, o la identificación de partes modificadas.
+</p>
+<ion-list header>
+
+    <ion-item text-wrap>
+        <ion-label>¿Se pueden localizar fallos?</ion-label>
+        <ion-toggle checked="false" [(ngModel)]=ccapa1 color="secondary"></ion-toggle>
+    </ion-item>
+
+</ion-list>
+
+<h2>Cambiabilidad</h2>
+<p>
+    La capacidad del software para que la implementación de una modificación se pueda realizar, incluye también codificación, diseño y documentación de cambios.
+</p>
+
+  <ion-list header>
+
+    <ion-item text-wrap>
+        <ion-label>¿Es facil de modificar y verificar?</ion-label>
+        <ion-toggle checked="false" [(ngModel)]=ccamb1 color="secondary"></ion-toggle>
+    </ion-item>
+
+    <ion-item text-wrap>
+        <ion-label>¿Se registran adecuadamente los cambios a la especificación y a los modulos con comentarios en el código?</ion-label>
+        <ion-toggle checked="false" [(ngModel)]=ccamb2 color="secondary"></ion-toggle>
+    </ion-item>
+</ion-list>
+
+<h2>Conformidad de facilidad de mantenimiento</h2>
+<p>
+    La capacidad que tiene el software para cumplir con los estándares de facilidad de mantenimiento.
+</p>
+
+  <ion-list header>
+
+    <ion-list-header text-wrap> En una escala de 0 a 5. ¿Qué tan satisfecho se encuentra de acuerdo a la facilidad de mantenimiento con el sistema?{{conman}}
+        <ion-item>
+            <ion-range min="0" max="5" step="1" pin="true" [(ngModel)]=conman color="danger">
+                <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+                <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+        </ion-item>
+    </ion-list-header>
+
+</ion-list>
+<button ion-button color="secondary" block (click)="Siguiente()">Guardar</button>
+</ion-content>

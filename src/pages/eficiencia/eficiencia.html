@@ -1,0 +1,81 @@
+<ion-header>
+        <ion-navbar>
+                <button ion-button menuToggle>
+                  <ion-icon name="menu"></ion-icon>
+                </button>
+                <ion-title>Eficiencia</ion-title>
+              </ion-navbar>
+    </ion-header>
+    
+    <ion-content padding>
+    <p>
+        La eficiencia del software es la forma del desempeño adecuado, de acuerdo a al número recursos utilizados según las condiciones planteadas. 
+        Se debe tener en cuenta otros aspectos como la configuración de hardware, el sistema operativo, entre otros.
+    </p>
+    
+    <h2>Comportamiento de tiempos</h2>
+    <p>
+            Los tiempos adecuados de respuesta y procesamiento, el rendimiento cuando realiza su función en condiciones específicas. 
+            Ejemplo, ejecutar el procedimiento más complejo del software y esperar su tiempo de respuesta, realizar la misma función pero con más cantidad de registros.
+    </p>
+    <ion-list header>
+
+            <ion-list-header text-wrap> En una escala de 1 a 10. ¿Qué tan rapido responde el sistema?{{ecomt1}}
+                    <ion-item>
+                        <ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=ecomt1 color="danger">
+                            <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+                            <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+                        </ion-range>
+                    </ion-item>
+            </ion-list-header>
+
+        <ion-item text-wrap>
+                <ion-label>¿Hay un balance entre la carga cognitiva y la facilidad de navegación dentro del sistema?</ion-label>
+                <ion-toggle checked="false" [(ngModel)]=ecomt2 color="secondary"></ion-toggle>
+            </ion-item>
+
+            <ion-item text-wrap>
+                    <ion-label>¿La recuperación de los errores se realiza en un tiempo prudente?</ion-label>
+                    <ion-toggle checked="false" [(ngModel)]=ecomt3 color="secondary"></ion-toggle>
+                </ion-item>
+    
+    </ion-list>
+    
+    <h2>Utilización de recursos</h2>
+    <p>
+            La capacidad del software para utilizar cantidades y tipos adecuados de recursos cuando este funciona bajo requerimientos o condiciones establecidas. 
+            Ejemplo, los recursos humanos, el hardware, dispositivos externos.
+    </p>
+    
+      <ion-list header>
+    
+        <ion-item text-wrap>
+            <ion-label>¿El sistema utiliza los recursos de manera eficiente?</ion-label>
+            <ion-toggle checked="false" [(ngModel)]=eutir1 color="secondary"></ion-toggle>
+        </ion-item>
+    
+        <ion-item text-wrap>
+            <ion-label>¿El sistema cuenta con un tamaño de las páginas que no es excesivo?</ion-label>
+            <ion-toggle checked="false" [(ngModel)]=eutir2 color="secondary"></ion-toggle>
+        </ion-item>
+    </ion-list>
+    
+    <h2>Conformidad de eficiencia</h2>
+    <p>
+            La capacidad que tiene el software para cumplir con los estándares o convenciones relacionados a la eficiencia.
+    </p>
+    
+      <ion-list header>
+    
+        <ion-list-header text-wrap> En una escala de 0 a 5. ¿Qué tan satisfecho se encuentra de acuerdo a la eficoencia del sistema?{{conefic}}
+            <ion-item>
+                <ion-range min="0" max="5" step="1" pin="true" [(ngModel)]=conefic color="danger">
+                    <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+                    <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+                </ion-range>
+            </ion-item>
+        </ion-list-header>
+    
+    </ion-list>
+    <button ion-button color="secondary" block (click)="Siguiente()">Guardar</button>
+</ion-content>

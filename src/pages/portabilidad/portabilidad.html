@@ -1,0 +1,46 @@
+<ion-header>
+        <ion-navbar>
+                <button ion-button menuToggle>
+                  <ion-icon name="menu"></ion-icon>
+                </button>
+                <ion-title>Portabilidad</ion-title>
+              </ion-navbar>
+    </ion-header>
+    
+    <ion-content padding>
+    <p>
+            La capacidad que tiene el software para ser trasladado de un entorno a otro.
+    </p>
+    
+    <h2>Facilidad de instalación</h2>
+    <p>
+        La facilidad del software para ser instalado en un entorno específico o por el usuario final.
+    </p>
+    <ion-list header>
+    
+        <ion-item text-wrap>
+            <ion-label>¿Puede el usuario o quien mantiene el software facilmente instalar el software en un ambiente funcional?</ion-label>
+            <ion-toggle checked="false" [(ngModel)]=pfins1 color="secondary"></ion-toggle>
+        </ion-item>
+    
+    </ion-list>
+    
+    <h2>Conformidad de portabilidad</h2>
+    <p>
+        La capacidad que tiene el software para cumplir con los estándares relacionados a la portabilidad.
+    </p>
+    
+      <ion-list header>
+    
+        <ion-list-header text-wrap> En una escala de 0 a 5. ¿Qué tan satisfecho se encuentra de acuerdo portabilidad del sistema?{{conpor}}
+            <ion-item>
+                <ion-range min="0" max="5" step="1" pin="true" [(ngModel)]=conpor color="danger">
+                    <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+                    <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+                </ion-range>
+            </ion-item>
+        </ion-list-header>
+    
+    </ion-list>
+    <button ion-button color="secondary" block (click)="Siguiente()">Guardar</button>
+    </ion-content>

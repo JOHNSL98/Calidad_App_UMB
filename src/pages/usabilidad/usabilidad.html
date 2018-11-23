@@ -1,0 +1,122 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Usabilidad</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<p>La usabilidad es la capacidad del software de ser entendido, aprendido, y usado en forma fácil y atractiva. Algunos criterios de funcionalidad, fiabilidad y eficiencia afectan la usabilidad, pero para los propósitos de la ISO/IEC 9126 ellos no clasifican como usabilidad. La usabilidad está determinada por los usuarios finales y los usuarios indirectos del software, dirigidos a todos los ambientes, a la preparación del uso y el resultado obtenido.</p>
+
+  <h2>Entendimiento</h2>
+	<p>La capacidad que tiene el software para permitir al usuario entender si es adecuado, y de una manera fácil como ser utilizado para las tareas y las condiciones particulares de la aplicación. En este criterio se debe tener en cuenta la documentación y de las ayudas que el software entrega.</p>
+
+  <ion-list header>
+
+    <ion-list-header text-wrap>En una escala de 1 a 10. ¿Qué proporción de las funciones del sistemas son evidentes al usuario?
+{{uente1}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=uente1 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+    <ion-list-header text-wrap>En una escala de 1 a 10. ¿Qué proporcion de las funciones se describen en la descripcion del producto?{{uente2}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=uente2 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+	</ion-list>
+
+  <h2>Aprendizaje</h2>
+	<p>La forma como el software permite al usuario aprender su uso. También es importante considerar la documentación.</p>
+
+  <ion-list header>
+
+		<ion-item text-wrap>
+			<ion-label>¿Según el conocimiento de los requeriemientos que tiene el usuario este puede interactuar con el sistema?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=uapre1 color="secondary"></ion-toggle>
+		</ion-item>
+
+	</ion-list>
+
+  <h2>Operabilidad</h2>
+	<p>La manera como el software permite al usuario operarlo y controlarlo.</p>
+
+  <ion-list header>
+
+		<ion-list-header>
+			<ion-label>En una escala de 1 a 10. ¿Cuan consistentes son los componentes de la interfase de usuario?{{uoper1}}</ion-label>
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=uoper1 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+    <ion-list-header text-wrap>En una escala de 1 a 10. ¿Qué proporcion de las operaciones se comportan de manera similar a operaciones similares en otras partes del sisitema?{{uoper2}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=uoper2 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema cuenta con un opcion de tutorial?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=uoper3 color="secondary"></ion-toggle>
+		</ion-item>
+
+	</ion-list>
+
+	<h2>Atracción</h2>
+	<p>La presentación del software debe ser atractiva al usuario. Esto se refiere a las cualidades del software para hacer más agradable al usuario, ejemplo, el diseño gráfico.</p>
+
+  <ion-list header>
+
+		<ion-list-header>
+			<ion-label>En una escala de 1 a 10. ¿Cuan a gusto se siente con la presentación del contenido?{{uatra1}}</ion-label>
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=uatra1 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+    <ion-list-header text-wrap>En una escala de 1 a 10. ¿Cuan a gusto se siente con los elementos de interacción provistos por el sistema?{{uatra2}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=uatra2  color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+	</ion-list>
+
+  <h2>Conformidad de uso</h2>
+	<p>La capacidad del software de cumplir los estándares o normas relacionadas a su usabilidad.
+	</p>
+
+  	<ion-list header>
+
+		<ion-list-header text-wrap> En una escala de 0 a 5. ¿Qué tan satisfecho se encuentra de acuerdo a la usabilidad del sistema?{{usacon}}
+			<ion-item>
+				<ion-range min="0" max="5" step="1" pin="true" [(ngModel)]=usacon color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+	</ion-list>
+	<button ion-button color="secondary" block (click)="Siguiente()">Guardar</button>
+</ion-content>

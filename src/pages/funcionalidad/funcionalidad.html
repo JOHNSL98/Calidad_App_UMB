@@ -1,0 +1,211 @@
+<ion-header>
+		<ion-navbar>
+				<button ion-button menuToggle>
+				  <ion-icon name="menu"></ion-icon>
+				</button>
+				<ion-title>Funcionalidad</ion-title>
+			  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<p>
+		Funcionalidad es la capacidad del software de cumplir y proveer las funciones para satisfacer las necesidades explícitas
+		e implícitas cuando es utilizado en condiciones específicas.
+	</p>
+
+	<h2>Adecuación</h2>
+	<p>
+		La capacidad del software para proveer un adecuado conjunto de funciones que cumplan las tareas y objetivos especificados
+		por el usuario.
+	</p>
+	<ion-list header>
+
+		<ion-list-header text-wrap> En una escala de 1 a 10. ¿Qué capacidad tiene el sistema de ofrecer soluciones bajo conficiones especificas?{{fadec1}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=fadec1 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+		<ion-list-header text-wrap> En una escala de 1 a 10. ¿El sitema cumple a cabalidad en cuanto a resultados los objetivos del mismo?{{fadec2}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=fadec2 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+		<ion-list-header text-wrap>En una escala de 1 a 10. Capacidad de reacción en cuanto a tiempo de espera y operación del sistema.{{fadec3}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=fadec3 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+		<ion-list-header text-wrap>En una escala de 1 a 10. ¿Qué tan estables son las especificaciones funcionales despues de entrar a funcionar?{{fadec4}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=fadec4 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+		<ion-list-header text-wrap> En una escala de 1 a 10. ¿Cuál adecuado son los procesos implentados para las soluciones del sistema?{{fadec5}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=fadec5 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+	</ion-list>
+
+	<h2>Exactitud</h2>
+	<p>
+		La capacidad del software para hacer procesos y entregar los resultados solicitados con precisión o de forma esperada.
+	</p>
+
+  	<ion-list header>
+
+		<ion-list-header text-wrap> En una escala de 1 a 10. ¿Cuan es la precision, en cuanto a la estructura que otorgan los formularios para que el usuario diligencie su solicitud?{{fexac1}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=fexac1 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+		<ion-item text-wrap>
+			<ion-label>¿Es posible monitorear los servicios de intercambio de información?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=fexac2 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-list-header text-wrap> En una escala de 1 a 10. ¿Cuan es la precision con la que el sistema solicita tanto numeros, o otros datos para su post - proceso?{{fexac3}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=fexac3 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+    <ion-list-header text-wrap> En una escala de 1 a 10. ¿La funcion ejecutada por los botones es acorde a su asignación? {{fexac4}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=fexac4 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+	</ion-list>
+
+	<h2>Interoperabilidad</h2>
+	<p>
+		La capacidad del software de interactuar con uno o más sistemas específicos.
+	</p>
+	<ion-list header>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema cuenta con la capacidad de comunicarse con otros sistemas?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=finte1 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿Es posible monitorear los servicios de intercambio de información?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=finte2 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-list-header text-wrap>En una escala de 1 a 10. ¿Qué medicion tendria el desempeño de servicios de intecambio de información?{{finte3}}
+			<ion-item>
+				<ion-range min="1" max="10" step="1" pin="true" [(ngModel)]=finte3 color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+		<ion-item text-wrap>
+			<ion-label>¿Hay rebundancia de información operativa?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=finte4 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema realiza procesos de evolución para la prestación y consumo de servicios de intercambio de información?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=finte5 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema realiza procesos de mantenimiento para la prestación y consumo de servicios de intercambio de información?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=finte6 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema realiza procesos de optimización tecnológica para la prestación y consumo de servicios de intercambio de información?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=finte7 color="secondary"></ion-toggle>
+		</ion-item>
+
+	</ion-list>
+
+	<h2>Seguridad</h2>
+	<p>
+		La capacidad del software para proteger la información y los datos de manera que los usuarios o los sistemas no autorizados
+		no puedan acceder a ellos para realizar operaciones, y la capacidad de aceptar el acceso a los datos de los usuarios o
+		sistemas autorizados.
+	</p>
+	<ion-list header>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema tiene la habilidad para prevenir el acceso a personal no autorizado?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=fsegu1 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿Según tipo de usuario el sistema restringe o habilita recursos?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=fsegu2 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema necesita de una previa autenticación del usuario ?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=fsegu3 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿El sistema cuenta con la capacidad de detectar un intento de ataque?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=fsegu4 color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item text-wrap>
+			<ion-label>¿La informacion transmitida solo es recibida por destinatario?</ion-label>
+			<ion-toggle checked="false" [(ngModel)]=fsegu5 color="secondary"></ion-toggle>
+		</ion-item>
+	</ion-list>
+
+	<h2>Conformidad de la funcionalidad</h2>
+	<p>La capacidad del software de cumplir los estándares referentes a la funcionalidad.
+	</p>
+
+  	<ion-list header>
+
+		<ion-list-header text-wrap> En una escala de 0 a 5. ¿Qué tan satisfecho se encuentra de acuerdo a funcionalidad con el sistema?{{funcon}}
+			<ion-item>
+				<ion-range min="0" max="5" step="1" pin="true" [(ngModel)]=funcon color="danger">
+					<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+					<ion-icon range-right color="danger" name="thermometer"></ion-icon>
+				</ion-range>
+			</ion-item>
+		</ion-list-header>
+
+	</ion-list>
+
+	<button ion-button color="secondary" block (click)="Siguiente()">Guardar</button>
+
+</ion-content>
